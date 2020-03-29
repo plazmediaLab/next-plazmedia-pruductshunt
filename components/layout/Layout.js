@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import Link from 'next/link'
 import { Global, css } from '@emotion/core';
 // Components
 import Meta from './Meta';
 import Header from './Header';
 
 const Layout = props => {
+  
   return (
     <Fragment>
 

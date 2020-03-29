@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 // components
-import NavMenu from './NavMenu';
-import SearchCom from './SearchCom';
+import NavMenu from '../ui/NavMenu';
+import SearchCom from '../ui/SearchCom';
 
 const colors = styled.div`
   :root{
@@ -16,6 +16,7 @@ const colors = styled.div`
 const Header = () => {
 
   const user = false;
+
 
   return (
     <nav className="navbar-component box-shadow-micro mb-3" id="navbar_1">
@@ -44,7 +45,7 @@ const Header = () => {
               Adian Nieves
             </div>
             <div>
-              <button className="btn btn-l btn-l-tomato br-lg">Log Out</button>
+              <button className="btn btn-l btn-l-tomato br-lg" id="btnTest">Log Out</button>
             </div>
           </div>
         ) : (
