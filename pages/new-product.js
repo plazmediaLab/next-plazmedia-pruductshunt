@@ -1,13 +1,13 @@
 // Componentes
 import Layout from '../components/layout/Layout';
 
-const AboutUs = () => (
+const NewProduct = () => (
   <div>
 
     <Layout>
 
       <div className="container">
-        <p>About Us page</p>
+        <h3>New Product page</h3>
       </div>
 
     </Layout>
@@ -15,4 +15,4 @@ const AboutUs = () => (
   </div>
 )
 
-export default AboutUs
+export default NewProduct

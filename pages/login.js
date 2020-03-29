@@ -1,13 +1,12 @@
-// Componentes
 import Layout from '../components/layout/Layout';
 
-const Home = () => (
+const Login = () => (
   <div>
 
-    <Layout> 
+    <Layout>
 
       <div className="container">
-        <p className="body">Home page</p>
+        <h3>Login page</h3>
       </div>
 
     </Layout>
@@ -15,4 +14,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default Login

@@ -1,13 +1,13 @@
 // Componentes
 import Layout from '../components/layout/Layout';
 
-const Home = () => (
+const Populas = () => (
   <div>
 
-    <Layout> 
+    <Layout>
 
       <div className="container">
-        <p className="body">Home page</p>
+        <h3>Populas page</h3>
       </div>
 
     </Layout>
@@ -15,4 +15,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default Populas
