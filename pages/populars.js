@@ -1,18 +1,21 @@
 // Componentes
 import Layout from '../components/layout/Layout';
 
-const Populas = () => (
-  <div>
+const Popular = () => {
 
-    <Layout>
+  return (
+    <div>
 
-      <div className="container">
-        <h3>Populas page</h3>
-      </div>
+      <Layout>
 
-    </Layout>
+        <div className="container">
+          <h3>Populas page</h3>
+        </div>
 
-  </div>
-)
+      </Layout>
 
-export default Populas
+    </div>
+  );
+};
+
+export default Popular;
