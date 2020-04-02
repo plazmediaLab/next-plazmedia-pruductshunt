@@ -3,6 +3,9 @@ import { Global, css } from '@emotion/core';
 // Components
 import Meta from './Meta';
 import Header from './Header';
+// Modular-CSS 
+import 'modular-css/css/modular.css';
+import 'modular-css/css/modular-css.font.css';
 
 const Layout = props => {
   
