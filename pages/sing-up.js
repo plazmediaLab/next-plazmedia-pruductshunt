@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
+import Router from 'next/router';
 // Validations
 import useValidation from '../hooks/useValidation';
 import validateSingUP from '../validations/validateSingUP';
 // Components 
 import { ErrorMsn } from '../components/ui/FormStyledComponent';
+// Firebase
+import firebase from '../Firebase';
 
 const SingUp = () => { 
 
@@ -14,6 +17,7 @@ const SingUp = () => {
     email: '',
     pass: '',
   };
+  const [error, setError] = useState(false);
 
   const {
     values,
@@ -25,8 +29,20 @@ const SingUp = () => {
 
   const { name, email, pass } = values;
 
-  function singUP(){
-    console.log('Creating account...');
+  async function singUP(){
+    
+    // Create account
+    try {
+
+      await firebase.singUP( name, email, pass );
+      Router.push('/');
+      
+    } catch (error) {
+
+      setError(error.message);
+
+    }
+
   }
 
   return (
@@ -35,6 +51,8 @@ const SingUp = () => {
       <Layout>
 
         <div className="container">
+
+          { error && <ErrorMsn msn_arg={error} type_arg='msn-s-cancel' /> }
           
           <div className="col-row jc-center pt-6">
             <div className="col-7">
@@ -105,7 +123,7 @@ const SingUp = () => {
 
                     <hr/>
                     <div className="jc-end">
-                      <button type="submit" className="btn btn-acept br-m">
+                      <button type="submit" className="btn btn-interactive btn-acept br-m">
                         Register
                       </button>
                     </div>

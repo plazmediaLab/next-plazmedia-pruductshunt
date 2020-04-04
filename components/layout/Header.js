@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 // components
@@ -6,6 +6,8 @@ import NavMenu from '../ui/NavMenu';
 import SearchCom from '../ui/SearchCom';
 // Modular-CSS
 import { navBarActionToggle } from 'modular-css';
+// Contex
+import { FirebaseContex } from '../../Firebase';
 
 const colors = styled.div`
   :root{
@@ -22,9 +24,7 @@ const Header = () => {
   const navbar_1 = useRef(null);
   const navActions = useRef(null);
   
-  // onClick
-  
-  const user = false;
+  const { userInfo, firebase } = useContext(FirebaseContex);
 
   return (
     <nav className="navbar-component box-shadow-micro mb-3" id="navbar_1" ref={navbar_1}>
@@ -50,14 +50,17 @@ const Header = () => {
         {/* Componente del Menu de navegación */}
         <NavMenu />
 
-        {user ? (
+        {userInfo ? (
           <div className="navbar-actions_item  jc-end">
-            <div>
+            <div className="pr-2">
               <i className="a-plaz-astronaut mr-2 txt-brand-2"></i>
-              Adian Nieves
+              <span className="txt-brand-2">User:</span> { userInfo.displayName }
             </div>
             <div>
-              <button className="btn btn-l btn-l-tomato br-lg" id="btnTest">Log Out</button>
+              <button 
+                className="btn btn-l btn-l-tomato br-lg"
+                onClick={() => firebase.LogOut()}
+              >Log Out</button>
             </div>
           </div>
         ) : (
