@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 // components
 import NavMenu from '../ui/NavMenu';
 import SearchCom from '../ui/SearchCom';
+import { Avatar } from '../ui/FormStyledComponent';
 // Modular-CSS
 import { navBarActionToggle } from 'modular-css';
 // Contex
@@ -52,10 +53,10 @@ const Header = () => {
 
         {userInfo ? (
           <div className="navbar-actions_item  jc-end">
-            <div className="pr-2">
+            <Avatar className="pr-2">
               <i className="a-plaz-astronaut mr-2 txt-brand-2"></i>
               <span className="txt-brand-2">User:</span> { userInfo.displayName }
-            </div>
+            </Avatar>
             <div>
               <button 
                 className="btn btn-l btn-l-tomato br-lg"

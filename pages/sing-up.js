@@ -5,7 +5,7 @@ import Router from 'next/router';
 import useValidation from '../hooks/useValidation';
 import validateSingUP from '../validations/validateSingUP';
 // Components 
-import { ErrorMsn } from '../components/ui/FormStyledComponent';
+import { ErrorMsn, Container } from '../components/ui/FormStyledComponent';
 // Firebase
 import firebase from '../Firebase';
 
@@ -50,11 +50,11 @@ const SingUp = () => {
 
       <Layout>
 
-        <div className="container">
+        <Container className="container">
 
           { error && <ErrorMsn msn_arg={error} type_arg='msn-s-cancel' /> }
           
-          <div className="col-row jc-center pt-6">
+          <div className="col-row jc-center">
             <div className="col-7">
               <div className="card br-lg">
                 <div className="card-head txt-a-c">
@@ -133,7 +133,7 @@ const SingUp = () => {
             </div>
           </div>
 
-        </div>
+        </Container>
 
       </Layout>
 

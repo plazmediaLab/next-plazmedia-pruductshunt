@@ -1,0 +1,185 @@
+/* ---------------------------- */
+/*  */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+input[type="file"]{
+    border: none;
+    padding-right: 0;
+    padding-left: 0!important;
+    width: 100%;
+}
+fieldset{
+    padding: 1.5rem 2.5rem 2.2rem;
+    border: .1rem solid var(--gray-background-3);
+}
+legend{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+@media only screen and (max-width: 767px){
+/* Móviles en horizontal o tablets en vertical */
+    fieldset{
+        padding: 1rem 1.5rem 1.7rem;
+    }
+    legend{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+.form-item.row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.form-item.row label{
+    padding-right: 1rem;
+    text-align: left;
+    flex: 0 0 1;
+    width: 100%;
+    margin-bottom: 0;
+}
+.form-item.row input{
+    flex: 0 0 80%;
+}
+.form-item.row textarea{
+    flex: 0 0 80%;
+    width: 100%;
+}
+@media only screen and (max-width: 767px){
+/* Móviles en horizontal o tablets en vertical */
+    .form-item.row{
+        flex-direction: column;
+    }
+    .form-item.row label{
+        margin-bottom: .5rem;
+    }
+}
+div.form-item .icon-input{
+    bottom: .32rem;
+}
+/* ---------------------------- */
+/*  */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.ai-spaceA,
+.ai-spaceB,
+.ai-center,
+.ai-start,
+.ai-end{
+    height: 100%;
+    display: flex;
+}
+.ai-spaceA{
+    align-items: space-around!important;
+}
+.ai-spaceB{
+    align-items: space-between!important;
+}
+.ai-center{
+    align-items: center!important;
+}
+.ai-start{
+    align-items: flex-start!important;
+}
+.ai-end{
+    align-items: flex-end!important;
+}
+/* ---------------------------- */
+/*  */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+@media only screen and (max-width: 767px){
+/* Móviles en horizontal o tablets en vertical */
+    .navbar-component{
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+}
+/* ---------------------------- */
+/* Custom input FILE */
+/* --------ˇˇˇˇˇˇˇˇˇˇˇˇ-------- */
+.form-item .custom-file{
+    flex: 0 0 80%;
+    display: grid;
+    /* justify-content: space-between; */
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+}
+.form-item .custom-file input[type="file"]{
+    display: none;
+    width: 100%;
+}
+.form-item .custom-file p{
+    overflow: hidden;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: .72em .892em;
+    border: .1rem solid var(--gray-background-4);
+    border-right: none;
+    line-height: 1.6rem;
+    display: block;
+    white-space: nowrap;
+    color: var(--light-m-stxt);
+    background-color: var(--gray-background-2);
+    font-weight: 400!important;
+    font-family: var(--font);
+}
+.form-item .custom-file p.fill{
+    border: .1rem solid #aec7bb;
+    border-right: none;
+    color: #506e60;
+    background-color: #e7f5ee;
+}
+.form-item .custom-file label{
+    margin: 0;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+@media only screen and (max-width: 767px){
+/* Móviles en horizontal o tablets en vertical */
+    
+}
+.form-item .custom-file.br-s p,
+.form-item .custom-file.br-s label,
+.form-item .custom-file.br-m p,
+.form-item .custom-file.br-s label,
+.form-item .custom-file.br-lg p,
+.form-item .custom-file.br-s label,
+.form-item .custom-file.br-xl p,
+.form-item .custom-file.br-s label{
+    overflow: hidden!important;
+}
+.form-item .custom-file.br-s p{
+    border-top-left-radius: var(--br-s)!important;
+    border-bottom-left-radius: var(--br-s)!important;
+}
+.form-item .custom-file.br-m p{
+    border-top-left-radius: var(--br-m)!important;
+    border-bottom-left-radius: var(--br-m)!important;
+}
+.form-item .custom-file.br-lg p{
+    border-top-left-radius: var(--br-lg)!important;
+    border-bottom-left-radius: var(--br-lg)!important;
+}
+.form-item .custom-file.br-xl p{
+    border-top-left-radius: var(--br-xl)!important;
+    border-bottom-left-radius: var(--br-xl)!important;
+}
+.form-item .custom-file.br-s label.btn{
+    border-top-right-radius: var(--br-s)!important;
+    border-bottom-right-radius: var(--br-s)!important;
+    color: red!important;
+}
+.form-item .custom-file.br-m label.btn{
+    border-top-right-radius: var(--br-m)!important;
+    border-bottom-right-radius: var(--br-m)!important;
+}
+.form-item .custom-file.br-lg label.btn{
+    border-top-right-radius: var(--br-lg)!important;
+    border-bottom-right-radius: var(--br-lg)!important;
+}
+.form-item .custom-file.br-xl label.btn{
+    border-top-right-radius: var(--br-xl)!important;
+    border-bottom-right-radius: var(--br-xl)!important;
+}

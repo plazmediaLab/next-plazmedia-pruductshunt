@@ -6,6 +6,7 @@ import Header from './Header';
 // Modular-CSS 
 import 'modular-css/css/modular.css';
 import 'modular-css/css/modular-css.font.css';
+import '../../public/static/css/index.css';
 
 const Layout = props => {
   
